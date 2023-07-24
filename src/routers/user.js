@@ -57,7 +57,7 @@ router.post("/users/logout", auth, async (req, res) => {
   }
 });
 
-// User Logout All users on different devices
+// User logout all users on different devices
 router.post("/users/logoutAll", auth, async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter((token) => {

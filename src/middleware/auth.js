@@ -3,7 +3,7 @@ const User = require("../models/user");
 
 const auth = async (req, res, next) => {
   try {
-    // NOTE: This gets the authorization token
+    // NOTE: Gets the authorization token
     const token = req.header("Authorization").replace("Bearer ", "");
     const decoded = jwt.verify(token, "thisisSomeprivatekey");
 
